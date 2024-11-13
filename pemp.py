@@ -6,4 +6,4 @@
 # }
 
 # my_tuple: tuple[int, ...] = (1,2,3)
-# temp 주석
+# temp 주석ㅇ
