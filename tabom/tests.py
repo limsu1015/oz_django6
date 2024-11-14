@@ -12,7 +12,7 @@ class TestAutoNow(TestCase):
         - pytest -> 써드파티 라이브러리 (poetry add 로 추가해야 됩니다.) 사실상 파이썬 표준.
     """
 
-    def test_autonow_field_is_set_when_save(self):
+    def test_autonow_field_is_set_when_save(self) -> None:
         """
                 모든 테스트 함수는 None 을 리턴합니다.
 
@@ -40,5 +40,5 @@ class TestAutoNow(TestCase):
         self.assertIsNotNone(user.up_dated)
         self.assertIsNotNone(user.created_at)
 
-    def test_sample(self) -> None:
-        assert 1 + 1 == 10
+    # def test_sample(self) -> None:
+    #     assert 1 + 1 == 10
