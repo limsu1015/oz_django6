@@ -500,6 +500,17 @@ dev = ["build", "hatch"]
 doc = ["sphinx"]
 
 [[package]]
+name = "testcase"
+version = "0.1.0"
+description = "Run tabular unit tests"
+optional = false
+python-versions = "*"
+files = [
+    {file = "testcase-0.1.0-py3-none-any.whl", hash = "sha256:da027ded9674259ab241b20beb45b01fa60d550fa78db89aef1c6b7e53996c5e"},
+    {file = "testcase-0.1.0.tar.gz", hash = "sha256:078a3e94ef7918934c3ac51a839daaaa32eca2406452c6dbc06225d2a656d100"},
+]
+
+[[package]]
 name = "types-pymysql"
 version = "1.1.0.20241103"
 description = "Typing stubs for PyMySQL"
@@ -546,4 +557,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "4600773f5225104f5f460b9da92d98ac1ca5d9ed9057243783e118d793209a1a"
+content-hash = "34edc8ed8f777b7607b885d4a5b698dec32d1453ece1482f510458fea9480950"
