@@ -20,6 +20,7 @@ class Article(models.Model):
     title = models.CharField(max_length=255)
     up_dated = models.DateField(auto_now=True)
     created_at = models.DateField(auto_now_add=True)
+    like_count = models.IntegerField(default=0)
 
 
 class Like(models.Model):
