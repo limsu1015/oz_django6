@@ -32,13 +32,15 @@ class TestArticleService(TestCase):
         Like.objects.create(user_id=user.id, article_id=articles[-1].id)
 
         # When
-        result_articles = get_article_list(0, 10)
+        # result_articles = get_article_list(0, 10)
 
         # Then
         # with CaptureQueriesContext(connection) as ctx:
         with self.assertNumQueries(2):
+            result_articles = get_article_list(0, 10)
+            result_counts = [a.like_set.count() for a in result_articles]
 
             self.assertEqual(len(result_articles), 10)
-            self.assertEqual(1, result_articles[0].like_set.count())
-            # 내림차순대로 id가 가져와진게 맞는지
+            self.assertEqual(1, result_counts[0])
+            # # 내림차순대로 id가 가져와진게 맞는지
             self.assertEqual([a.id for a in reversed(articles[10:21])], [a.id for a in result_articles])
